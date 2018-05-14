@@ -9,6 +9,9 @@ import { HeaderComponent } from './header/header.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ClientComponent } from './client/client.component';
+import { CareerComponent } from './career/career.component';
+import { ProductComponent } from './product/product.component';
 
 
 
@@ -19,7 +22,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     HeaderComponent,
     AboutusComponent,
     ContactusComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    ClientComponent,
+    CareerComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

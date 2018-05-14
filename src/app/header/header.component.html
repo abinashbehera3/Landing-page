@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-light justify-content-around sticky-top">
-	<div class="navbar-brand logo col" >
+	<div class="navbar-brand logo col" (click)="homenavigate()" >
 		<img src="">
 		<span class="logo-text"> SMART FOOD SAFE </span>
 	</div>
@@ -11,19 +11,33 @@
   	<div class="navbar-collapse collapse col" id="navbarSupportedContent" >
 	    <ul class="navbar-nav ml-auto ">
 	      <li class="nav-item">
-	        <a class="nav-link link1" href="#" routerLink="/"  routerLinkActive="active" >Product </a>
+	        <a class="nav-link link1" href="#" routerLink="/aboutus"  routerLinkActive="active" >About Us </a>
 	      </li>
-	       <li class="nav-item">
-	        <a class="nav-link link1" href="#" routerLink="/"  routerLinkActive="active" >Productone</a>
-	      </li>
+		<ul class="navbar-nav mr-auto " (mouseenter)="showBackdrop=true" (mouseleave)="categoryexpand=false; showBackdrop=false;">
+	 			    <li class="nav-item dropdown mega-dropdown" [class.show]="categoryexpand" 
+	 			    (click)="$event.preventDefault();categoryexpand=!categoryexpand;"
+	 			     (mouseenter)="$event.preventDefault();categoryexpand=true;">
+			        	<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink"  aria-haspopup="true" aria-expanded="false" routerLink="/product" >
+			          		Product
+			       		</a>
+			        	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" [class.show]="categoryexpand" >
+		                   <a class="nav-link " href="#" routerLink="/career"  routerLinkActive="active" >Dynamic Form</a>
+		                   <a class="nav-link " href="#" routerLink="/client"  routerLinkActive="active" >Visitor Log</a>
+			        	</div>
+			      	</li>
+		</ul>
 	      <li class="nav-item link2">
-	        <a class="nav-link" href="#" routerLink="/"  routerLinkActive="active" >Solutions</a>
+	        <a class="nav-link" href="#" routerLink="/client"  routerLinkActive="active" >Clients</a>
 	      </li>
 	      <li class="nav-item link3">
-	        <a class="nav-link" href="" routerLink="/" routerLinkActive="active" >About Us</a>
+	        <a class="nav-link" href="" routerLink="/career" routerLinkActive="active" >Career</a>
 	      </li>
-	      
+	       <li class="nav-item link3">
+	        <a class="nav-link" href="" routerLink="/contactus" routerLinkActive="active" >Contact Us</a>
+	      </li>
 	    </ul>
+
+			      	
   	</div>
 </nav>
 
